@@ -1,0 +1,223 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles for the header and navigation */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav h1 {
+  font-size: 24px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav li {
+  font-size: 18px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff4500; /* Warna saat hover */
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.menu-toggle:focus {
+  outline: none;
+}
+
+.show-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #333;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.show-menu li {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #555;
+}
+
+.show-menu li:last-child {
+  border-bottom: none;
+}
+
+/* Styles for the sections */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #f5f5f5; /* Warna latar belakang */
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Styles for the project gallery */
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.project {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+}
+
+.project h3 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.project p {
+  font-size: 16px;
+  color: #666;
+}
+
+.project:hover {
+  transform: scale(1.05); /* Efek zoom saat hover */
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the form */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: #ff4500; /* Warna tombol submit */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #e63c00; /* Warna saat hover tombol submit */
+}
+
+/* Styles for the footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    margin-top: 20px;
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .show-menu {
+    display: flex;
+  }
+
+  nav li {
+    margin-bottom: 10px;
+  }
+
+  .section {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav h1 {
+    font-size: 20px;
+  }
+
+  nav li {
+    font-size: 16px;
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
+}

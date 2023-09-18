@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Portofolio Saya</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Portofolio Saya</h1>
+        <button id="menu-toggle" class="menu-toggle">&#9776;</button>
+        <ul>
+          <li><a href="#about">Tentang Saya</a></li>
+          <li><a href="#portfolio">Portofolio</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="about" class="section">
+      <h2>Tentang Saya</h2>
+      <p>
+        Selamat datang di portofolio saya. Saya adalah seorang pengembang web
+        dengan pengalaman dalam HTML, CSS, dan JavaScript.
+      </p>
+    </section>
+
+    <!-- <section id="portfolio" class="section">
+      <h2>Portofolio</h2>
+      <!-- Tambahkan konten portofolio Anda di sini -->
+    <!-- </section> -->
+    <section id="portfolio" class="section">
+      <h2>Portofolio</h2>
+      <div class="project-gallery">
+        <div class="project">
+          <img
+            src="https://radarlebong.disway.id/upload/185ce2aa83a7794ad95a65848a54cde6.png"
+            alt="Proyek 1"
+          />
+          <h3>Google.com</h3>
+        </div>
+        <div class="project">
+          <img
+            src="data:image/png;base64,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"
+            alt="Proyek 2"
+          />
+          <h3>Facebook.com</h3>
+        </div>
+        <div class="project">
+          <img
+            src="https://cdn.cms-twdigitalassets.com/content/dam/help-twitter/twitter_logo_blue.png.twimg.768.png"
+            alt="Proyek 3"
+          />
+          <h3>Twitter.com</h3>
+        </div>
+        <!-- Tambahkan lebih banyak proyek sesuai kebutuhan -->
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Kontak</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Nama:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Pesan:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Portofolio Saya</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
